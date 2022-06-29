@@ -1,0 +1,28 @@
+{
+  "name": "vue-project",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@tolgee/vue": "^4.7.0",
+    "core-js": "^3.22.8",
+    "dotenv": "^16.0.1",
+    "vue": "^3.2.36"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.2.37",
+    "prettier": "^2.6.2",
+    "serve": "^13.0.2",
+    "typescript": "~4.7.3",
+    "vite": "^2.9.9"
+  }
+}
