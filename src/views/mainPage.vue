@@ -21,13 +21,22 @@
         margin-top: -2rem;
         font-size: 25px;
         border: none !important;
-        padding: 0px 0px 10px 10px;
+        padding: 0rem 0px 10px 15rem;
+        float: left;
+        width: 30%;
     }
 
     .parent-css{
         background-color: black;
         margin: -8px;
         padding-bottom: 40rem;
+        color: white;
+        font-family: 'Anek Malayalam', sans-serif;
+        font-weight: 650;
+        font-size: 55px;
+        text-align: left;
+        padding-left: 7rem;
+        padding-right: 45rem;
     }
 
     .heading{
@@ -36,14 +45,27 @@
         margin-top: 0.9rem;
         font-size: 30px;
         padding-left: 20px;
+        float: left;
+        width: 70%;
     }
-
+/*
     .container-name div {
         display: inline-block;
         width: 500px;
         min-height: 50px;
         height: auto;
         margin-top: 2.5rem;
+    }*/
+
+    .container-name ::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .container-name{
+        color: white;
+        padding-bottom: 12.5rem;
     }
 
     .image-css{
@@ -59,13 +81,17 @@
 
 <script>
 import { defineComponent } from 'vue';
-import { useLanguage, useTranslate } from '@tolgee/vue';
+import { useLanguage } from '@tolgee/vue';
 import { T } from "@tolgee/vue";
 
 
-export default {
-    components: { T }
-}
+export default defineComponent({
+    components: { T },
+    setup() {
+        const language = useLanguage();
+        return {language};
+    },
+});
 
 
 
@@ -91,7 +117,6 @@ export default {
                 This is a demo to showcase how to translate web apps using Tolgee with VueJS.
             </div>
         </T>
-        <div :title="t('main_content')">Hello</div>
 
 
     </div>
